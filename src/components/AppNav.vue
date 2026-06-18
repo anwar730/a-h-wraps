@@ -51,12 +51,12 @@ onUnmounted(() => window.removeEventListener('scroll', onScroll))
 .nav-links a.router-link-active { color: var(--black); }
 
 .nav-cta {
-  background: var(--black); color: var(--white) !important;
+  background: var(--accent); color: var(--white) !important;
   padding: 0.55rem 1.4rem; letter-spacing: 0.08em !important;
   transition: background 0.2s !important;
 }
-.nav-cta:hover { background: var(--accent) !important; }
-.nav-cta.router-link-active { background: var(--accent) !important; color: var(--white) !important; }
+.nav-cta:hover { background: var(--black) !important; }
+.nav-cta.router-link-active { background: var(--black) !important; color: var(--white) !important; }
 
 .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
 .hamburger span { width: 24px; height: 1.5px; background: var(--black); }

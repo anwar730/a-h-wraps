@@ -33,7 +33,7 @@
           <RouterLink to="/contact" class="btn-primary" style="font-size:0.75rem">Request Info</RouterLink>
         </div>
         <div class="product-img-ph">
-          <img src="../assets/images/machinewrap.jpg" alt="Machine Stretch Wrap Film Photo" style="width:100%; height:100%; object-fit:cover; object-position:center">
+          <img src="https://silagewrap.com/Uploads/67f956fd5fe96.jpg" alt="Machine Stretch Wrap Film Photo" style="width:100%; height:100%; object-fit:cover; object-position:center">
         </div>
       </div>
       <!-- Hand Wrap -->
@@ -133,81 +133,51 @@ const rows = [
   justify-content: flex-end; padding: 6rem 8% 5rem;
   background: var(--off-white); padding-top: calc(72px + 4rem);
 }
-.hero-eyebrow {
-  font-size: 0.72rem; font-weight: 500; letter-spacing: 0.18em;
-  text-transform: uppercase; color: var(--accent); margin-bottom: 1.5rem;
-}
-.page-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(3rem, 6vw, 5.5rem); font-weight: 300; line-height: 1.05;
-}
+.hero-eyebrow { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.5rem; }
+.page-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(3rem, 6vw, 5.5rem); font-weight: 300; line-height: 1.05; }
 .page-title em { font-style: italic; color: var(--accent); }
 
 .products-section { padding: 7rem 8%; background: var(--white); }
-.products-header {
-  display: flex; justify-content: space-between; align-items: flex-end;
-  margin-bottom: 4rem; flex-wrap: wrap; gap: 2rem;
-}
+.products-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 4rem; flex-wrap: wrap; gap: 2rem; }
 .products-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; }
 
-.product-card {
-  background: var(--off-white); padding: 3rem;
-  transition: background 0.3s; cursor: default;
-}
-.product-card:hover { background: #ede8e1; }
+.product-card { background: var(--off-white); padding: 3rem; transition: background 0.3s; cursor: default; }
+.product-card:hover { background: #e8e0e0; }
 .product-card.featured {
-  grid-column: 1 / -1;
-  display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;
-  background: var(--black); color: var(--white);
+  grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;
+  background: #1e2a3a; color: var(--white);
 }
-.product-card.featured:hover { background: #111; }
+.product-card.featured:hover { background: #1e2a3a; }
 .product-tag {
   display: inline-block; font-size: 0.65rem; letter-spacing: 0.15em;
   text-transform: uppercase; border: 1px solid var(--warm-gray);
   color: var(--mid-gray); padding: 0.3rem 0.8rem; margin-bottom: 1.5rem;
 }
-.product-card.featured .product-tag {
-  border-color: rgba(255,255,255,0.2); color: rgba(255,255,255,0.5);
-}
-.product-name {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2rem; font-weight: 300; line-height: 1.2; margin-bottom: 1rem;
-}
+.product-card.featured .product-tag { border-color: rgba(255,255,255,0.2); color: rgba(255,255,255,0.5); }
+.product-name { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300; line-height: 1.2; margin-bottom: 1rem; }
 .product-card.featured .product-name { color: var(--white); }
 .product-desc { font-size: 0.88rem; color: var(--mid-gray); line-height: 1.8; margin-bottom: 2rem; }
 .product-card.featured .product-desc { color: rgba(255,255,255,0.55); }
-.product-features {
-  list-style: none; display: flex; flex-direction: column;
-  gap: 0.6rem; margin-bottom: 2rem;
-}
-.product-features li {
-  font-size: 0.82rem; color: rgba(255,255,255,0.5); display: flex; gap: 0.8rem;
-}
+.product-features { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 2rem; }
+.product-features li { font-size: 0.82rem; color: rgba(255,255,255,0.5); display: flex; gap: 0.8rem; }
 .product-features li span { color: var(--accent); }
 .product-img-ph {
   aspect-ratio: 4/3; background: rgba(255,255,255,0.05);
-  border: 1px dashed rgba(255,255,255,0.1);
-  display: flex; align-items: center; justify-content: center;
+  border: 1px dashed rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center;
 }
 .product-img-ph-light {
   aspect-ratio: 4/3; background: rgba(0,0,0,0.06);
-  border: 1px dashed rgba(0,0,0,0.1);
-  display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;
+  border: 1px dashed rgba(0,0,0,0.1); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;
 }
-.product-img-ph span { font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.25); }
-.product-img-ph-light span { font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(0,0,0,0.25); }
 
 .comparison-section { padding: 7rem 8%; background: var(--off-white); }
 .comparison-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
 .comparison-table th {
   font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase;
-  font-weight: 500; padding: 1.2rem 1.5rem;
-  border-bottom: 2px solid var(--black); text-align: left;
+  font-weight: 500; padding: 1.2rem 1.5rem; border-bottom: 2px solid var(--black); text-align: left;
 }
 .comparison-table th:not(:first-child) { text-align: center; }
-.comparison-table td {
-  padding: 1.1rem 1.5rem; border-bottom: 1px solid var(--border); color: var(--mid-gray);
-}
+.comparison-table td { padding: 1.1rem 1.5rem; border-bottom: 1px solid var(--border); color: var(--mid-gray); }
 .comparison-table td:not(:first-child) { text-align: center; }
 .comparison-table tr:hover td { background: rgba(0,0,0,0.02); }
 .col-accent { color: var(--accent); }
@@ -215,7 +185,7 @@ const rows = [
 .cross { color: var(--warm-gray); }
 .feature-name { color: var(--black); font-weight: 500; }
 
-.cta-strip { padding: 7rem 8%; background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%); }
+.cta-strip { padding: 7rem 8%; background: linear-gradient(135deg, #1e2a3a 0%, #0a0a0a 100%); }
 
 @media (max-width: 960px) {
   .products-grid { grid-template-columns: 1fr; }

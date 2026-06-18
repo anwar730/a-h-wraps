@@ -155,39 +155,16 @@ const contactInfo = [
   justify-content: flex-end; padding: 6rem 8% 5rem;
   background: var(--off-white); padding-top: calc(72px + 4rem);
 }
-.hero-eyebrow {
-  font-size: 0.72rem; font-weight: 500; letter-spacing: 0.18em;
-  text-transform: uppercase; color: var(--accent); margin-bottom: 1.5rem;
-}
-.page-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(3rem, 6vw, 5.5rem); font-weight: 300; line-height: 1.05;
-}
+.hero-eyebrow { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.5rem; }
+.page-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(3rem, 6vw, 5.5rem); font-weight: 300; line-height: 1.05; }
 .page-title em { font-style: italic; color: var(--accent); }
-.page-sub {
-  font-size: 0.95rem; color: var(--mid-gray);
-  max-width: 540px; line-height: 1.8; margin-top: 1.5rem;
-}
+.page-sub { font-size: 0.95rem; color: var(--mid-gray); max-width: 540px; line-height: 1.8; margin-top: 1.5rem; }
 
 .contact-section { padding: 7rem 8%; background: var(--white); }
-.contact-grid {
-  display: grid; grid-template-columns: 1fr 1.2fr;
-  gap: 6rem; align-items: start;
-}
-
-.contact-info-item {
-  display: flex; gap: 1.2rem; align-items: flex-start;
-  padding: 1.5rem 0; border-bottom: 1px solid var(--border);
-}
-.contact-icon {
-  width: 40px; height: 40px; background: var(--off-white);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1rem; flex-shrink: 0;
-}
-.contact-info-label {
-  font-size: 0.7rem; letter-spacing: 0.12em;
-  text-transform: uppercase; color: var(--mid-gray); margin-bottom: 0.3rem;
-}
+.contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 6rem; align-items: start; }
+.contact-info-item { display: flex; gap: 1.2rem; align-items: flex-start; padding: 1.5rem 0; border-bottom: 1px solid var(--border); }
+.contact-icon { width: 40px; height: 40px; background: var(--white); display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
+.contact-info-label { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-navy); margin-bottom: 0.3rem; }
 .contact-info-val { font-size: 0.95rem; color: var(--black); font-weight: 500; }
 
 .map-wrap { width: 100%; height: 280px; margin-top: 2rem; overflow: hidden; border: 1px solid var(--border); }
@@ -196,17 +173,13 @@ const contactInfo = [
 .contact-form { display: flex; flex-direction: column; gap: 1.2rem; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
 .form-group { display: flex; flex-direction: column; gap: 0.5rem; }
-.form-group label {
-  font-size: 0.7rem; letter-spacing: 0.12em;
-  text-transform: uppercase; color: var(--mid-gray); font-weight: 500;
-}
+.form-group label { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-navy); font-weight: 500; }
 .form-group input,
 .form-group select,
 .form-group textarea {
   font-family: 'DM Sans', sans-serif; font-size: 0.9rem; color: var(--black);
   background: var(--off-white); border: 1px solid transparent;
-  padding: 0.85rem 1rem; outline: none;
-  transition: border-color 0.2s, background 0.2s;
+  padding: 0.85rem 1rem; outline: none; transition: border-color 0.2s, background 0.2s;
 }
 .form-group input:focus,
 .form-group select:focus,
@@ -214,19 +187,19 @@ const contactInfo = [
 .form-group textarea { resize: vertical; min-height: 120px; }
 .form-note { font-size: 0.75rem; color: var(--mid-gray); margin-top: -0.3rem; }
 .form-submit {
-  background: var(--black); color: var(--white);
+  background: var(--accent); color: var(--white);
   padding: 1rem 2.5rem; font-family: 'DM Sans', sans-serif;
   font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase;
   font-weight: 500; border: none; cursor: pointer;
   transition: background 0.25s, transform 0.2s; align-self: flex-start;
 }
-.form-submit:hover:not(:disabled) { background: var(--accent); transform: translateY(-2px); }
+.form-submit:hover:not(:disabled) { background: var(--black); transform: translateY(-2px); }
 .form-submit:disabled { opacity: 0.6; cursor: not-allowed; }
 
 .form-success {
-  padding: 2rem; background: #f0f7ed;
-  border-left: 3px solid #4a7c59;
-  font-size: 0.9rem; color: #2d5a3d;
+  padding: 2rem; background: #f0f4ff;
+  border-left: 3px solid var(--accent-navy);
+  font-size: 0.9rem; color: var(--accent-navy);
   display: flex; flex-direction: column; gap: 1rem;
 }
 .reset-btn {

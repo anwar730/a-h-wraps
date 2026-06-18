@@ -9,7 +9,7 @@
   <section class="about-section">
     <div class="about-visual reveal">
       <div class="about-img-placeholder">
-        <span>Manufacturing Facility Photo</span>
+        <img src="../assets/WhatsApp Image 2026-06-15 at 19.40.56.jpeg" alt="Factory Photo" style="width:100%; height:100%; object-fit:cover; object-position:center">
       </div>
       <div class="about-accent-box">
         <div class="num">20+</div>
@@ -125,21 +125,18 @@ const reasons = [
   background: linear-gradient(145deg, #d4c9bb 0%, #b0a498 100%);
   display: flex; align-items: center; justify-content: center;
 }
-.about-img-placeholder span {
-  font-size: 0.7rem; letter-spacing: 0.15em;
-  text-transform: uppercase; color: rgba(0,0,0,0.35);
-}
+.about-img-placeholder span { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(0,0,0,0.35); }
 .about-accent-box {
   position: absolute; bottom: -2rem; right: -2rem;
-  width: 160px; padding: 1.5rem; background: var(--black); color: var(--white);
+  width: 160px; padding: 1.5rem; background: var(--accent); color: var(--white);
 }
 .about-accent-box .num {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 2.5rem; font-weight: 300; color: var(--accent);
+  font-size: 2.5rem; font-weight: 300; color: var(--white);
 }
 .about-accent-box p {
   font-size: 0.7rem; letter-spacing: 0.1em;
-  text-transform: uppercase; color: rgba(255,255,255,0.6); margin-top: 0.3rem;
+  text-transform: uppercase; color: rgba(255,255,255,0.8); margin-top: 0.3rem;
 }
 .about-list { list-style: none; margin-top: 2rem; }
 .about-list li {
@@ -155,43 +152,27 @@ const reasons = [
   gap: 5rem; align-items: start; max-width: 1000px; margin: 0 auto;
 }
 .founder-photo {
-  aspect-ratio: 3/4;
-  background: linear-gradient(145deg, #d4c9bb 0%, #b0a498 100%);
+  aspect-ratio: 3/4; background: linear-gradient(145deg, #d4c9bb 0%, #b0a498 100%);
   display: flex; align-items: center; justify-content: center;
 }
-.founder-photo span {
-  font-size: 0.7rem; letter-spacing: 0.12em;
-  text-transform: uppercase; color: rgba(0,0,0,0.3);
-}
-.founder-name {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2.2rem; font-weight: 300; color: var(--black);
-}
+.founder-photo span { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(0,0,0,0.3); }
+.founder-name { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 300; color: var(--black); }
 .founder-role {
   font-size: 0.75rem; letter-spacing: 0.15em;
   text-transform: uppercase; color: var(--accent); margin-top: 0.3rem;
 }
 
 .why-section { padding: 7rem 8%; background: var(--white); }
-.why-grid {
-  display: grid; grid-template-columns: repeat(4, 1fr);
-  gap: 2px; margin-top: 4rem;
-}
-.why-card {
-  background: var(--off-white); padding: 2.5rem 2rem;
-  transition: background 0.2s;
-}
-.why-card:hover { background: #ede8e1; }
+.why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; margin-top: 4rem; }
+.why-card { background: var(--off-white); padding: 2.5rem 2rem; transition: background 0.2s; }
+.why-card:hover { background: #e8e0e0; }
 .why-icon { font-size: 1.8rem; display: block; margin-bottom: 1rem; }
-.why-card h4 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.3rem; font-weight: 400; margin-bottom: 0.8rem; color: var(--black);
-}
+.why-card h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 400; margin-bottom: 0.8rem; color: var(--black); }
 .why-card p { font-size: 0.88rem; color: var(--mid-gray); line-height: 1.7; }
 
 .cta-strip {
   padding: 7rem 8%;
-  background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+  background: linear-gradient(135deg, #1e2a3a 0%, #0a0a0a 100%);
 }
 
 @media (max-width: 960px) {
@@ -200,7 +181,5 @@ const reasons = [
   .founder-card { grid-template-columns: 1fr; gap: 2.5rem; }
   .why-grid { grid-template-columns: 1fr 1fr; }
 }
-@media (max-width: 640px) {
-  .why-grid { grid-template-columns: 1fr; }
-}
+@media (max-width: 640px) { .why-grid { grid-template-columns: 1fr; } }
 </style>

@@ -39,37 +39,51 @@ const year = new Date().getFullYear()
 
 <style scoped>
 footer {
-  background: var(--black); color: rgba(255,255,255,0.5);
+  background: #1e2a3a;
+  color: rgba(255,255,255,0.7);
   padding: 4rem 8% 2rem;
 }
 .footer-top {
-  display: grid; grid-template-columns: 1.5fr 1fr 1fr;
-  gap: 4rem; padding-bottom: 3rem;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 4rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
 }
 .footer-logo {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.6rem; font-weight: 600; color: var(--white); margin-bottom: 1rem;
+  font-size: 1.6rem; font-weight: 600;
+  color: var(--white); margin-bottom: 1rem;
 }
 .footer-logo span { color: var(--accent); }
-.footer-tagline { font-size: 0.85rem; line-height: 1.7; max-width: 280px; }
-.footer-col h4 {
-  font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase;
-  color: var(--white); margin-bottom: 1.5rem; font-weight: 500;
+.footer-tagline {
+  font-size: 0.85rem; line-height: 1.75;
+  max-width: 280px; color: rgba(255,255,255,0.65);
 }
-.footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.8rem; }
+.footer-col h4 {
+  font-size: 0.7rem; letter-spacing: 0.15em;
+  text-transform: uppercase; color: var(--white);
+  margin-bottom: 1.5rem; font-weight: 600;
+}
+.footer-links {
+  list-style: none;
+  display: flex; flex-direction: column; gap: 0.8rem;
+}
 .footer-links a {
-  font-size: 0.85rem; color: rgba(255,255,255,0.45);
+  font-size: 0.85rem; color: rgba(255,255,255,0.6);
   text-decoration: none; transition: color 0.2s;
 }
 .footer-links a:hover { color: var(--accent); }
 .footer-bottom {
   display: flex; justify-content: space-between; align-items: center;
-  padding-top: 2rem; font-size: 0.75rem; flex-wrap: wrap; gap: 1rem;
+  padding-top: 2rem; font-size: 0.75rem;
+  color: rgba(255,255,255,0.45);
+  flex-wrap: wrap; gap: 1rem;
 }
 .launch-badge {
   font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase;
-  color: var(--accent); border: 1px solid rgba(184,134,11,0.3); padding: 0.35rem 0.8rem;
+  color: var(--accent); border: 1px solid rgba(204,0,0,0.4);
+  padding: 0.35rem 0.8rem;
 }
 @media (max-width: 960px) {
   .footer-top { grid-template-columns: 1fr; gap: 2rem; }
