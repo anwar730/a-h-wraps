@@ -1,25 +1,73 @@
 <template>
   <!-- HERO -->
-  <!-- Replace just the hero section and its styles -->
-
-<!-- HERO -->
 <section id="home" class="hero">
+
   <div class="hero-bg"></div>
-  <div class="hero-center">
-    <div class="hero-accent-line"></div>
-    <p class="hero-eyebrow">American-Made &nbsp;·&nbsp; Atlanta, Georgia &nbsp;·&nbsp; Est. 20+ Years</p>
-    <h1 class="hero-title">
-      Stretch Wrap<br><em>Engineered</em><br>to Perform
-    </h1>
-    <div class="hero-divider"></div>
-    <p class="hero-desc">
-      A&H Manufacturing delivers premium stretch wrap film, produced domestically for businesses that demand consistent quality and a supply chain they can rely on.
+
+  <div class="hero-text">
+
+    <p class="hero-eyebrow">
+      AMERICAN MADE • ATLANTA, GEORGIA
     </p>
-    <div class="hero-actions">
-      <RouterLink to="/products" class="btn-primary">View Products</RouterLink>
-      <RouterLink to="/contact" class="btn-outline">Get in Touch</RouterLink>
+
+    <h1 class="hero-title">
+      Stretch Wrap
+      <span>Manufactured</span>
+      For Performance
+    </h1>
+
+    <p class="hero-desc">
+      Premium stretch wrap film engineered for logistics,
+      warehousing and industrial operations that demand
+      reliability, consistency and superior load containment.
+    </p>
+
+    <div class="hero-highlight">
+      <span>✓ Domestic Manufacturing</span>
+      <span>✓ Fast Lead Times</span>
+      <span>✓ Industry Proven</span>
     </div>
+
+    <div class="hero-actions">
+      <RouterLink to="/products" class="btn-primary">
+        View Products
+      </RouterLink>
+
+      <RouterLink to="/contact" class="btn-outline">
+        Request Quote
+      </RouterLink>
+    </div>
+
+    <div class="hero-spec-row">
+      <div class="hero-spec">
+        <h3>500%</h3>
+        <p>Stretch Capacity</p>
+      </div>
+
+      <div class="hero-spec">
+        <h3>20+</h3>
+        <p>Years Experience</p>
+      </div>
+
+      <div class="hero-spec">
+        <h3>100%</h3>
+        <p>USA Made</p>
+      </div>
+    </div>
+
   </div>
+
+  <div class="hero-media">
+
+    <img
+      src="../assets/WhatsApp Image 2026-06-15 at 19.34.00.jpeg"
+      alt="A&H Manufacturing"
+    />
+
+   
+
+  </div>
+
 </section>
 
   <!-- MARQUEE STRIP -->
@@ -125,6 +173,12 @@ const marqueeItems = [
   'Atlanta, Georgia', '·', 'Bulk Orders Welcome', '·',
 ]
 
+const heroSpecs = [
+  { num: '300%', label: 'Elongation' },
+  { num: '20+', label: 'Years Running' },
+  { num: '100%', label: 'Made in USA' },
+]
+
 const trustItems = [
   { icon: '🏭', title: 'Domestic Production', sub: 'Made in Metro Atlanta — not overseas' },
   { icon: '⚡', title: 'Shorter Lead Times', sub: 'No container delays or port backlogs' },
@@ -135,7 +189,7 @@ const trustItems = [
 const scienceItems = [
   {
     num: '01', title: 'LLDPE Resin',
-    desc: 'Linear low-density polyethylene provides the molecular structure needed for exceptional elongation and memory — it stretches up to 300% and snaps back to grip your load tightly.',
+    desc: 'Linear low-density polyethylene provides the molecular structure needed for exceptional elongation and memory — it stretches up to 500% and snaps back to grip your load tightly.',
   },
   {
     num: '02', title: 'Cast vs Blown',
@@ -205,8 +259,8 @@ const ctaItems = [
 <style scoped>
 /* ─── DESIGN TOKENS ─────────────────────────── */
 :root {
-  --accent:      #CC0000;
-  --accent-light:#e60000;
+  --accent:      #8A2E22;
+  --accent-light:#A8392A;
   --accent-navy: #003087;
   --black:       #0a0a0a;
   --off-white:   #f7f5f0;
@@ -216,65 +270,233 @@ const ctaItems = [
 
 /* ─── HERO ──────────────────────────────────── */
 .hero {
-  position: relative; min-height: 100vh; padding-top: 72px;
-  display: flex; align-items: center; justify-content: center;
-  background: var(--off-white); overflow: hidden;
-}
-.hero-bg {
-  position: absolute; inset: 0;
+  position: relative;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  overflow: hidden;
   background:
-    repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(0,0,0,0.028) 59px, rgba(0,0,0,0.028) 60px),
-    repeating-linear-gradient(90deg, transparent, transparent 59px, rgba(0,0,0,0.018) 59px, rgba(0,0,0,0.018) 60px);
-  pointer-events: none;
+  radial-gradient(circle at top left,
+  rgba(138,46,34,.15),
+  transparent 35%),
+
+  radial-gradient(circle at bottom right,
+  rgba(0,48,135,.12),
+  transparent 35%),
+
+  linear-gradient(
+  135deg,
+  #faf8f4 0%,
+  #f2ede6 100%
+  );
 }
-.hero-center {
-  position: relative; z-index: 1; display: flex; flex-direction: column;
-  align-items: center; text-align: center; padding: 6rem 2rem;
-  max-width: 780px; width: 100%;
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+  linear-gradient(
+  rgba(0,0,0,.03) 1px,
+  transparent 1px),
+
+  linear-gradient(
+  90deg,
+  rgba(0,0,0,.03) 1px,
+  transparent 1px);
+
+  background-size: 80px 80px;
 }
-.hero-accent-line {
-  width: 1px; height: 60px;
-  background: linear-gradient(to bottom, transparent, rgba(204,0,0,0.5));
-  margin-bottom: 2.5rem; opacity: 0;
-  animation: fadeUp 0.8s 0.1s forwards;
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+  padding: 7rem;
 }
+
 .hero-eyebrow {
-  font-size: 0.65rem; font-weight: 400; letter-spacing: 0.22em;
-  text-transform: uppercase; color: var(--accent);
-  margin-bottom: 2rem; opacity: 0; animation: fadeUp 0.8s 0.25s forwards;
+  color: var(--accent);
+  letter-spacing: .3em;
+  font-size: .75rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
 }
+
 .hero-title {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(3.2rem, 6vw, 6rem); font-weight: 300; line-height: 1.07;
-  color: var(--black); margin-bottom: 0; opacity: 0; animation: fadeUp 0.8s 0.4s forwards;
+  font-size: clamp(3.8rem, 6vw, 6rem);
+  font-weight: 300;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
 }
-.hero-title em { font-style: italic; color: var(--accent); }
-.hero-divider {
-  width: 40px; height: 1px; background: rgba(204,0,0,0.4);
-  margin: 2.5rem auto; opacity: 0; animation: fadeUp 0.8s 0.52s forwards;
+.hero-title span {
+  font-weight: 400;
 }
+
 .hero-desc {
-  font-size: 1rem; font-weight: 300; color: var(--mid-gray);
-  max-width: 480px; line-height: 1.9; margin-bottom: 3rem;
-  opacity: 0; animation: fadeUp 0.8s 0.6s forwards;
+  max-width: 600px;
+  line-height: 1.9;
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
 }
+
+.hero-highlight {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.hero-highlight span {
+  font-weight: 600;
+  color: #333;
+}
+
 .hero-actions {
-  display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;
-  opacity: 0; animation: fadeUp 0.8s 0.75s forwards;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 3rem;
 }
+
 .btn-primary {
-  display: inline-block; background: var(--black); color: var(--white);
-  padding: 0.9rem 2.5rem; font-size: 0.72rem; letter-spacing: 0.15em;
-  text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+  background: var(--accent);
+  color: white;
+  padding: 1rem 2.4rem;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: .3s;
 }
-.btn-primary:hover { background: var(--accent); }
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+}
+
 .btn-outline {
-  display: inline-block; background: transparent; color: var(--black);
-  padding: 0.9rem 2.5rem; font-size: 0.72rem; letter-spacing: 0.15em;
-  text-transform: uppercase; text-decoration: none;
-  border: 1px solid rgba(0,0,0,0.25); transition: border-color 0.2s;
+  border: 1px solid #ccc;
+  color: #111;
+  padding: 1rem 2.4rem;
+  border-radius: 12px;
+  text-decoration: none;
+  background: white;
 }
-.btn-outline:hover { border-color: rgba(0,0,0,0.5); }
+
+.hero-spec-row {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.hero-spec {
+  background: rgba(255,255,255,.8);
+  backdrop-filter: blur(12px);
+  padding: 1rem 1.2rem;
+  border-radius: 18px;
+  min-width: 150px;
+  box-shadow:
+  0 20px 50px rgba(0,0,0,.08);
+}
+
+.hero-spec h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.hero-spec p {
+  font-size: .8rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+
+.hero-media {
+  position: relative;
+  height: 100%;
+  min-height: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-media img {
+  width: 90%;
+  height: auto;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 30px;
+  box-shadow: 0 40px 100px rgba(0,0,0,.18);
+}
+.floating-card {
+  position: absolute;
+  top: 120px;
+  left: 20px;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 20px;
+  box-shadow:
+  0 25px 60px rgba(0,0,0,.15);
+}
+
+.floating-card h3 {
+  font-size: 2rem;
+  color: var(--accent);
+}
+
+.floating-card-bottom {
+  position: absolute;
+  bottom: 120px;
+  right: 20px;
+  background: rgba(255,255,255,.9);
+  backdrop-filter: blur(20px);
+  padding: 1.5rem;
+  border-radius: 20px;
+  box-shadow:
+  0 20px 50px rgba(0,0,0,.15);
+}
+
+.floating-card-bottom strong {
+  display: block;
+  margin-bottom: .5rem;
+}
+
+.floating-card-bottom span {
+  color: #666;
+  font-size: .85rem;
+}
+
+@keyframes floatImage {
+  from {
+    transform: translateY(0) scale(1);
+  }
+
+  to {
+    transform: translateY(-20px) scale(1.03);
+  }
+}
+
+@media(max-width:991px){
+
+  .hero{
+    grid-template-columns:1fr;
+  }
+
+  .hero-text{
+    padding:3rem 2rem;
+  }
+
+  .hero-media{
+    min-height:500px;
+  }
+
+  .hero-title{
+    font-size:4rem;
+  }
+
+  .hero-spec-row{
+    flex-wrap:wrap;
+  }
+
+}
 
 /* ─── MARQUEE STRIP ──────────────────────────── */
 .marquee-strip { background: var(--accent); padding: 0.65rem 0; overflow: hidden; white-space: nowrap; }
@@ -343,11 +565,11 @@ const ctaItems = [
 
 /* ─── CTA SECTION ────────────────────────────── */
 .cta-section {
-  padding: 7% 8%; background: linear-gradient(135deg, #1e2a3a 0%, #0a0a0a 100%); 
+  padding: 7% 8%; background: linear-gradient(135deg, #1e2a3a 0%, #0a0a0a 100%);
   display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;
 }
 .cta-right { display: flex; flex-direction: column; gap: 1.8rem; }
-.cta-item { border-left: 2px solid rgba(204,0,0,0.4); padding-left: 1.2rem; }
+.cta-item { border-left: 2px solid rgba(138,46,34,0.4); padding-left: 1.2rem; }
 .cta-item-title {
   font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase;
   color: var(--accent); margin-bottom: 0.4rem;
@@ -378,9 +600,23 @@ const ctaItems = [
 
 /* ─── ANIMATIONS ─────────────────────────────── */
 @keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
 /* ─── RESPONSIVE ─────────────────────────────── */
 @media (max-width: 1100px) { .serve-grid { grid-template-columns: repeat(3, 1fr); } .science-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 960px) { .testimonials-grid { grid-template-columns: 1fr; } .trust-bar { grid-template-columns: 1fr 1fr; } .cta-section { grid-template-columns: 1fr; gap: 3rem; } }
-@media (max-width: 640px) { .hero-title { font-size: clamp(2.8rem, 10vw, 4rem); } .serve-grid { grid-template-columns: repeat(2, 1fr); } .science-grid { grid-template-columns: 1fr; } .trust-bar { grid-template-columns: 1fr; } }
+@media (max-width: 960px) {
+  .testimonials-grid { grid-template-columns: 1fr; }
+  .trust-bar { grid-template-columns: 1fr 1fr; }
+  .cta-section { grid-template-columns: 1fr; gap: 3rem; }
+  .hero { grid-template-columns: 1fr; min-height: auto; }
+  .hero-media { min-height: 46vh; order: -1; }
+  .hero-text { padding: 3.5rem 6vw; }
+}
+@media (max-width: 640px) {
+  .hero-title { font-size: clamp(2.4rem, 9vw, 3.4rem); }
+  .serve-grid { grid-template-columns: repeat(2, 1fr); }
+  .science-grid { grid-template-columns: 1fr; }
+  .trust-bar { grid-template-columns: 1fr; }
+  .hero-spec-row { gap: 1.4rem; }
+}
 </style>
