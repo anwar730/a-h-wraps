@@ -60,7 +60,7 @@
   <div class="hero-media">
 
     <img
-      src="../assets/WhatsApp Image 2026-06-15 at 19.34.00.jpeg"
+      src="../assets/images/hero.jpeg"
       alt="A&H Manufacturing"
     />
 
@@ -269,41 +269,47 @@ const ctaItems = [
 }
 
 /* ─── HERO ──────────────────────────────────── */
+/* ─── HERO ──────────────────────────────────── */
 .hero {
   position: relative;
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 1.1fr 1fr;
+  grid-template-columns: 1fr 1.2fr;
   align-items: center;
   overflow: hidden;
+  padding-top: clamp(70px, 8vh, 100px);
+
   background:
-  radial-gradient(circle at top left,
-  rgba(138,46,34,.15),
-  transparent 35%),
-
-  radial-gradient(circle at bottom right,
-  rgba(0,48,135,.12),
-  transparent 35%),
-
-  linear-gradient(
-  135deg,
-  #faf8f4 0%,
-  #f2ede6 100%
-  );
+    radial-gradient(
+      circle at top left,
+      rgba(138, 46, 34, 0.15),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(0, 48, 135, 0.12),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #faf8f4 0%,
+      #f2ede6 100%
+    );
 }
 
 .hero-bg {
   position: absolute;
   inset: 0;
   background-image:
-  linear-gradient(
-  rgba(0,0,0,.03) 1px,
-  transparent 1px),
-
-  linear-gradient(
-  90deg,
-  rgba(0,0,0,.03) 1px,
-  transparent 1px);
+    linear-gradient(
+      rgba(0, 0, 0, 0.03) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.03) 1px,
+      transparent 1px
+    );
 
   background-size: 80px 80px;
 }
@@ -316,19 +322,21 @@ const ctaItems = [
 
 .hero-eyebrow {
   color: var(--accent);
-  letter-spacing: .3em;
-  font-size: .75rem;
+  letter-spacing: 0.3em;
+  font-size: 0.75rem;
   margin-bottom: 2rem;
   font-weight: 600;
 }
 
 .hero-title {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: clamp(3.8rem, 6vw, 6rem);
   font-weight: 300;
   line-height: 0.95;
   letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
 }
+
 .hero-title span {
   font-weight: 400;
 }
@@ -361,12 +369,13 @@ const ctaItems = [
 
 .btn-primary {
   background: var(--accent);
+  text-align: center;
   color: white;
   padding: 1rem 2.4rem;
   border-radius: 12px;
   text-decoration: none;
   font-weight: 600;
-  transition: .3s;
+  transition: 0.3s ease;
 }
 
 .btn-primary:hover {
@@ -378,8 +387,14 @@ const ctaItems = [
   color: #111;
   padding: 1rem 2.4rem;
   border-radius: 12px;
+  text-align: center;
   text-decoration: none;
   background: white;
+  transition: 0.3s ease;
+}
+
+.btn-outline:hover {
+  transform: translateY(-3px);
 }
 
 .hero-spec-row {
@@ -388,53 +403,79 @@ const ctaItems = [
 }
 
 .hero-spec {
-  background: rgba(255,255,255,.8);
+  background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(12px);
   padding: 1rem 1.2rem;
   border-radius: 18px;
   min-width: 150px;
+
   box-shadow:
-  0 20px 50px rgba(0,0,0,.08);
+    0 20px 50px rgba(0, 0, 0, 0.08);
 }
 
 .hero-spec h3 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 1.6rem;
   font-weight: 400;
+  margin-bottom: 0.25rem;
 }
+
 .hero-spec p {
-  font-size: .8rem;
+  font-size: 0.8rem;
   color: #666;
   text-transform: uppercase;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
 }
+
+/* IMAGE SIDE */
 
 .hero-media {
   position: relative;
-  height: 100%;
   min-height: 900px;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
+  padding-right: 5vw;
 }
 
 .hero-media img {
-  width: 90%;
-  height: auto;
-  max-height: 85vh;
+  width: 100%;
+  max-width: 700px;
+  max-height: 90vh;
+
   object-fit: contain;
+
   border-radius: 30px;
-  box-shadow: 0 40px 100px rgba(0,0,0,.18);
+
+  box-shadow:
+    0 45px 120px rgba(0, 0, 0, 0.18);
+
+  filter: contrast(1.05) saturate(1.05);
+
+  transform: scale(1.03);
+  transition: transform 0.5s ease;
 }
+
+.hero-media img:hover {
+  transform: scale(1.05);
+}
+
+/* FLOATING CARDS */
+
 .floating-card {
   position: absolute;
   top: 120px;
   left: 20px;
+
   background: white;
+
   padding: 1.5rem;
   border-radius: 20px;
+
   box-shadow:
-  0 25px 60px rgba(0,0,0,.15);
+    0 25px 60px rgba(0, 0, 0, 0.15);
 }
 
 .floating-card h3 {
@@ -446,56 +487,111 @@ const ctaItems = [
   position: absolute;
   bottom: 120px;
   right: 20px;
-  background: rgba(255,255,255,.9);
+
+  background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(20px);
+
   padding: 1.5rem;
   border-radius: 20px;
+
   box-shadow:
-  0 20px 50px rgba(0,0,0,.15);
+    0 20px 50px rgba(0, 0, 0, 0.15);
 }
 
 .floating-card-bottom strong {
   display: block;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .floating-card-bottom span {
   color: #666;
-  font-size: .85rem;
+  font-size: 0.85rem;
 }
 
-@keyframes floatImage {
-  from {
-    transform: translateY(0) scale(1);
+/* TABLET */
+
+@media (max-width: 991px) {
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding-top: 90px;
   }
 
-  to {
-    transform: translateY(-20px) scale(1.03);
+  .hero-text {
+    padding: 3rem 2rem;
+  }
+
+  .hero-media {
+    min-height: 600px;
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+    order: -1;
+  }
+
+  .hero-media img {
+    width: 100%;
+    max-width: 600px;
+    max-height: 65vh;
+    transform: none;
+  }
+
+  .hero-title {
+    font-size: 4rem;
+  }
+
+  .hero-spec-row {
+    flex-wrap: wrap;
   }
 }
 
-@media(max-width:991px){
+/* MOBILE */
 
-  .hero{
-    grid-template-columns:1fr;
+@media (max-width: 640px) {
+  .hero {
+    padding-top: 100px;
   }
 
-  .hero-text{
-    padding:3rem 2rem;
+  .hero-text {
+    padding: 2rem 1.5rem 3rem;
   }
 
-  .hero-media{
-    min-height:500px;
+  .hero-title {
+    font-size: clamp(2.8rem, 10vw, 4rem);
+    line-height: 1;
   }
 
-  .hero-title{
-    font-size:4rem;
+  .hero-desc {
+    font-size: 1rem;
   }
 
-  .hero-spec-row{
-    flex-wrap:wrap;
+  .hero-media {
+    min-height: auto;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
   }
 
+  .hero-media img {
+    width: 100%;
+    max-height: 70vh;
+    border-radius: 24px;
+  }
+
+  .hero-highlight {
+    gap: 1rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .hero-spec-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hero-spec {
+    min-width: unset;
+  }
 }
 
 /* ─── MARQUEE STRIP ──────────────────────────── */

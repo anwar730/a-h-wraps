@@ -9,7 +9,7 @@
   <section class="about-section">
     <div class="about-visual reveal">
       <div class="about-img-placeholder">
-        <img src="../assets/WhatsApp Image 2026-06-15 at 19.40.56.jpeg" alt="Factory Photo" style="width:100%; height:100%; object-fit:cover; object-position:center">
+        <img src="../assets/images/facility.jpeg" alt="Factory Photo" style="width:100%; height:100%; object-fit:cover; object-position:center">
       </div>
       <div class="about-accent-box">
         <div class="num">20+</div>
