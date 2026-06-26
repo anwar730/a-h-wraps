@@ -39,9 +39,6 @@
       <h2 class="section-title">Meet the <em>Founder</em></h2>
     </div>
     <div class="founder-card reveal">
-      <div class="founder-photo">
-        <span>Founder Photo</span>
-      </div>
       <div class="founder-info">
         <h3 class="founder-name">Ali Abdullah</h3>
         <p class="founder-role">Founder & CEO</p>
@@ -148,14 +145,8 @@ const reasons = [
 
 .founder-section { padding: 7rem 8%; background: var(--off-white); }
 .founder-card {
-  display: grid; grid-template-columns: 1fr 1.5fr;
-  gap: 5rem; align-items: start; max-width: 1000px; margin: 0 auto;
+  max-width: 700px; margin: 0 auto;
 }
-.founder-photo {
-  aspect-ratio: 3/4; background: linear-gradient(145deg, #d4c9bb 0%, #b0a498 100%);
-  display: flex; align-items: center; justify-content: center;
-}
-.founder-photo span { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(0,0,0,0.3); }
 .founder-name { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 300; color: var(--black); }
 .founder-role {
   font-size: 0.75rem; letter-spacing: 0.15em;
@@ -178,7 +169,6 @@ const reasons = [
 @media (max-width: 960px) {
   .about-section { grid-template-columns: 1fr; gap: 4rem; }
   .about-accent-box { right: 0; }
-  .founder-card { grid-template-columns: 1fr; gap: 2.5rem; }
   .why-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 640px) { .why-grid { grid-template-columns: 1fr; } }
